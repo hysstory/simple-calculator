@@ -2,21 +2,21 @@ class Calculator {
     constructor(prevOperandTextElement, currentOperandTextElement) {
         this.prevOperandTextElement = prevOperandTextElement;
         this.currentOperandTextElement = currentOperandTextElement;
-        this.clear;
+        this.clear();
     }
 
     clear() {
-        this.currentOperand = "";
-        this.previousOperand = "";
+        this.currentOperand = '';
+        this.previousOperand = '';
         this.operation = undefined;
     }
 
     delete() {
-
+        this.currentOperand = this.currentOperand.toString().slice(0, -1)
     }
 
     appendNumber(number) {
-        this.currentOperand = this.currentOperand.toString() + number.toString();
+        this.currentOperand = this.currentOperand.toString() + number.toString()
     }
 
     chooseOperation(operation) {
